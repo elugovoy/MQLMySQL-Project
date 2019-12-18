@@ -1,0 +1,18 @@
+LIBRARY mqlmysql.dll
+EXPORTS
+
+cMySqlVersion
+cGetMySqlErrorNumber
+cGetMySqlErrorDescription
+cGetCursorErrorNumber
+cGetCursorErrorDescription
+cMySqlConnect
+cMySqlDisconnect
+cMySqlExecute
+cMySqlCursorOpen
+cMySqlCursorClose
+cMySqlCursorRows
+cMySqlCursorFetchRow
+cMySqlGetRowField
+cMySqlRowsAffected
+ReadIni
