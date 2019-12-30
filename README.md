@@ -38,8 +38,12 @@ The structure of ["MQL4"](https://github.com/elugovoy/MQLMySQL-Project/tree/mast
 When all tests are done successful, you can build your own functionality.
 
 ### Useful Links
-The article "How to Access MySQL Databases from MQL5 (MQL4)" - [https://www.mql5.com/en/articles/932](https://www.mql5.com/en/articles/932)
-Discussion forum can help to solve your difficulties - [https://www.mql5.com/en/forum/37085](https://www.mql5.com/en/forum/37085)
-My Profile at MQL5 Community - [https://www.mql5.com/en/users/elugovoy](https://www.mql5.com/en/users/elugovoy)
-To support over PayPal - [paypal.me/elugovoy](https://www.paypal.me/elugovoy)
+The article "How to Access MySQL Databases from MQL5 (MQL4)" - [https://www.mql5.com/en/articles/932](https://www.mql5.com/en/articles/932)  
+
+Discussion forum can help to solve your difficulties - [https://www.mql5.com/en/forum/37085](https://www.mql5.com/en/forum/37085)  
+
+My Profile at MQL5 Community - [https://www.mql5.com/en/users/elugovoy](https://www.mql5.com/en/users/elugovoy)  
+
+To support over PayPal - [paypal.me/elugovoy](https://www.paypal.me/elugovoy)  
+
 
