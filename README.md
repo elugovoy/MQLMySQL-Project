@@ -5,7 +5,7 @@ The MQLMySQL library is a solution for accessing MySQL database from MQL4/MQL5 s
 **If you:**
   - work with MetaTrader 4 (32-bit) you can use [this "MQL4"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL4) package (TRM included)
   - work with MetaTrader 5 (64-bit) and love "*old school*" development, you can use [this "MQL5 old school"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL5%20old%20school) package where simply set of functions implemented (TRM included)
-  - work with MetaTrader 5 (64-bit) and love "*CLASSic*" development, you can use [this "MQL5 classes"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL5%20old%20school) package where implemented classes to work with database (TRM included)
+  - work with MetaTrader 5 (64-bit) and love "*CLASSic*" development, you can use [this "MQL5 classes"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL5%20classes) package where implemented classes to work with database (TRM included)
   - very improved developer and want to extend library functionality by yourself - you would need:
     - MS Visual Studio 2017 project [MQLMySQL](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQLMySQL) to compile MQLMySQL.DLL for x86 and x64 platforms, also this project depends on MySQL headers you can find below
     - [MySQL-5.7.28 x32](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MySQL-5.7.28%20x32) - MySQL v5.7.28 header files to compile DLL for x86 platforms
@@ -27,7 +27,7 @@ The MQLMySQL library is a solution for accessing MySQL database from MQL4/MQL5 s
 
 ### Installation
 
-The structure of ["MQL4"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL4), ["MQL5 old school"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL5%20old%20school) and ["MQL5 classes"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL5%20old%20school) directories are similar to MetaTrader terminal's directory structure, so you just need to:
+The structure of ["MQL4"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL4), ["MQL5 old school"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL5%20old%20school) and ["MQL5 classes"](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQL5%20classes) directories are similar to MetaTrader terminal's directory structure, so you just need to:
   - Setup your MySQL/MariaDB database
   - Make sure you can connect to database by using standard tools (like HeidiSQL or so)
   - Download sources you need and copy them into MetaTrader **Data Folder**
