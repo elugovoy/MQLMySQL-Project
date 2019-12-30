@@ -10,7 +10,7 @@ The MQLMySQL library is a solution for accessing MySQL database from MQL4/MQL5 s
     - MS Visual Studio 2017 project [MQLMySQL](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MQLMySQL) to compile MQLMySQL.DLL for x86 and x64 platforms, also this project depends on MySQL headers you can find below
     - [MySQL-5.7.28 x32](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MySQL-5.7.28%20x32) - MySQL v5.7.28 header files to compile DLL for x86 platforms
     - [MySQL-8.0.18 x64](https://github.com/elugovoy/MQLMySQL-Project/tree/master/MySQL-8.0.18%20x64) - MySQL v8.0.18 header files to compile DLL for x64 platforms
-  - appreciate work I've done and want to support me with this and other related projects - I accept [PayPal donation](paypal.me/elugovoy)
+  - appreciate work I've done and want to support me with this and other related projects - I accept [PayPal donation](https://www.paypal.me/elugovoy)
 
 **This solution is developed to be free** (c) Eugene Lugovoy
 
@@ -41,5 +41,5 @@ When all tests are done successful, you can build your own functionality.
 The article "How to Access MySQL Databases from MQL5 (MQL4)" - [https://www.mql5.com/en/articles/932](https://www.mql5.com/en/articles/932)
 Discussion forum can help to solve your difficulties - [https://www.mql5.com/en/forum/37085](https://www.mql5.com/en/forum/37085)
 My Profile at MQL5 Community - [https://www.mql5.com/en/users/elugovoy](https://www.mql5.com/en/users/elugovoy)
-To support over PayPal - [paypal.me/elugovoy](paypal.me/elugovoy)
+To support over PayPal - [paypal.me/elugovoy](https://www.paypal.me/elugovoy)
 
