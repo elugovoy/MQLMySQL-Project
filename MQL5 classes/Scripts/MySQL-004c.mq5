@@ -17,7 +17,7 @@ string INI;
 //+------------------------------------------------------------------+
 void OnStart()
 {
- CMQLMySQL *DB = new CMQLMySQL(); // database object
+ CMySQL *DB = new CMySQL(); // database object
  
  Print (DB.DllVersion());
 
@@ -48,7 +48,7 @@ void OnStart()
  Query = "SELECT id, code, start_date FROM `test_table`";
  Print ("SQL> ", Query);
  
- CMQLCursor *Cursor = new CMQLCursor();
+ CMySQLCursor *Cursor = new CMySQLCursor();
  
  if (Cursor.Open(DB, Query))
     {

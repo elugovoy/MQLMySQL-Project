@@ -1,5 +1,5 @@
 /********************************************************************
- * MQLMySQL interface class library                                 *
+ * MQLMySQL interface library "CLASSic Style"                       *
  ********************************************************************
  * This library uses MQLMySQL.DLL was developed as interface to con-*
  * nect to the MySQL database server.                               *
@@ -64,7 +64,7 @@ string ReadIni             (string pFileName,   // INI-filename
 #import
 
 
-class CMQLMySQL
+class CMySQL
 {
  private:
        bool     SQLTrace;
@@ -89,7 +89,7 @@ class CMQLMySQL
         MySqlErrorDescription = "No errors.";
        }
  public:
-       CMQLMySQL(void)
+       CMySQL(void)
        {
         // constructor
         SQLTrace = false; // Trace is disabled by default
@@ -99,7 +99,7 @@ class CMQLMySQL
         ClearErrors();
        }
        
-       ~CMQLMySQL(void)
+       ~CMySQL(void)
        {
         // destructor
         SQLTrace = false; // Trace is disabled by default
@@ -238,7 +238,7 @@ class CMQLMySQL
        // pQuery      - SQL query
        // ------------------------------------------------------
        // RETURN      - true : when execution succeded
-       //             - false: when any error was raised (see MySqlErrorNumber, MySqlErrorDescription, MySqlErrorQuery)
+       //             - false: when any error was raised (see MySqlErrorNumber, MySqlErrorDescription)
        bool Execute(string pQuery)
        {
         ClearErrors();
@@ -248,7 +248,7 @@ class CMQLMySQL
          // no connection
          MySqlErrorNumber = -2;
          MySqlErrorDescription = "No connection to the database.";
-         if (SQLTrace) Print (MQLMYSQL_TRACER, "CMD>",MySqlErrorNumber, ": ", MySqlErrorDescription);
+         if (SQLTrace) Print (MQLMYSQL_TRACER, "CMD>", MySqlErrorNumber, ": ", MySqlErrorDescription);
          return (false);
         }
  
@@ -256,7 +256,7 @@ class CMQLMySQL
         {
          MySqlErrorNumber = cGetMySqlErrorNumber(ConnectID);
          MySqlErrorDescription = cGetMySqlErrorDescription(ConnectID);
-         if (SQLTrace) Print (MQLMYSQL_TRACER, "CMD>",MySqlErrorNumber, ": ", MySqlErrorDescription);
+         if (SQLTrace) Print (MQLMYSQL_TRACER, "CMD>", MySqlErrorNumber, ": ", MySqlErrorDescription);
          return (false);
         }
         return (true);
@@ -289,9 +289,9 @@ class CMQLMySQL
         return MySqlErrorDescription;
        } // LastErrorMessage
        
-}; // class CMQLMySQL
+}; // class CMySQL
 
-class CMQLCursor
+class CMySQLCursor
 {
  private:
        int CursorID;
@@ -307,7 +307,7 @@ class CMQLCursor
         CursorErrorDescription = "No errors.";
        } // ClearErrors
  public:
-       CMQLCursor(void)
+       CMySQLCursor(void)
        {
         // constructor
         ConnectID = -1;
@@ -316,7 +316,7 @@ class CMQLCursor
         SQLTrace = false;
        }
        
-       ~CMQLCursor(void)
+       ~CMySQLCursor(void)
        {
         // destructor
         if (CursorID>=0) Close();
@@ -324,8 +324,9 @@ class CMQLCursor
        }
 
       // creates an cursor based on SELECT statement
-      // return valuse - cursor identifier
-      bool Open(CMQLMySQL *pConnection, string pQuery)
+      // return valuse - true on success
+      //                 false on fail, to get the error - call LastError() and/or LastErrorMessage()
+      bool Open(CMySQL *pConnection, string pQuery)
       {
        SQLTrace = pConnection.GetTrace();
        ConnectID =  pConnection.GetConnectID();
@@ -347,7 +348,7 @@ class CMQLCursor
       void Close(void)
       {
        ClearErrors();
-       if (CursorID == -1) return; // no active cursor
+       // if (CursorID == -1) return; // no active cursor
        
        cMySqlCursorClose(CursorID);
        CursorErrorNumber = cGetCursorErrorNumber(CursorID);

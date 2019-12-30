@@ -17,7 +17,7 @@ string INI;
 //+------------------------------------------------------------------+
 void OnStart()
 {
- CMQLMySQL *DB = new CMQLMySQL(); // database object
+ CMySQL *DB = new CMySQL(); // database object
  
  Print (DB.DllVersion());
 

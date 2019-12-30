@@ -17,9 +17,9 @@ string INI;
 //+------------------------------------------------------------------+
 void OnStart()
 {
- CMQLMySQL* DB1 = new CMQLMySQL();
- CMQLMySQL* DB2 = new CMQLMySQL();
- CMQLMySQL* DB3 = new CMQLMySQL();
+ CMySQL* DB1 = new CMySQL();
+ CMySQL* DB2 = new CMySQL();
+ CMySQL* DB3 = new CMySQL();
  
  string Host, User, Password, Database, Socket; // database credentials
  int Port,ClientFlag;

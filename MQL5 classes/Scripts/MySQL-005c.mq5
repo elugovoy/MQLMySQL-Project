@@ -17,7 +17,7 @@ string INI;
 //+------------------------------------------------------------------+
 void OnStart()
 {
- CMQLMySQL *DB = new CMQLMySQL(); // database object
+ CMySQL *DB = new CMySQL(); // database object
  
  Print (DB.DllVersion());
 
@@ -38,7 +38,7 @@ void OnStart()
  }
  
  string Query;
- CMQLCursor *Cursor1 = new CMQLCursor(), *Cursor2 = new CMQLCursor(), *Cursor3 = new CMQLCursor(), *Cursor4 = new CMQLCursor();
+ CMySQLCursor *Cursor1 = new CMySQLCursor(), *Cursor2 = new CMySQLCursor(), *Cursor3 = new CMySQLCursor(), *Cursor4 = new CMySQLCursor();
  Query = "SELECT * FROM `test_table` LIMIT 1";
 
  if (Cursor1.Open(DB, Query)) {Print ("Cursor 1 was opened.");} else {Print ("Cursor 1 failed. Error: ", Cursor1.LastErrorMessage());}
